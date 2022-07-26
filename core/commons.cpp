@@ -35,7 +35,6 @@ secipc::SslContext::SslContext(bool client) {
     ssl = SSL_new(ctx);
 
     BIO_new_bio_pair(&internal_bio, 0, &external_bio, 0);
-    SSL_set_bio(ssl, internal_bio, internal_bio);
 
     SSL_set_bio(ssl, internal_bio, internal_bio);
 
